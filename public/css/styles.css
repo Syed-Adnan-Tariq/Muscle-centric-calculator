@@ -367,12 +367,6 @@ body {
   width: 700px;
 }
 
-.right-container-result h1:nth-of-type(1) {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 28px;
-  font-weight: 600;
-}
-
 .right-container-result .set {
   display: flex;
   justify-content: space-between;
@@ -688,7 +682,7 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .total-calories img {
@@ -717,6 +711,8 @@ body {
 }
 .total-calories h3 {
   color: white;
+  display: flex;
+  align-items: center;
 }
 .text-white {
   color: white;
@@ -768,6 +764,10 @@ body {
   width: 100%;
   overflow: hidden;
   background-color: #e5e5e5;
+}
+#totalCal {
+  font-size: 2rem;
+  margin-left: 1rem;
 }
 @-ms-viewport{
   width: device-width;
