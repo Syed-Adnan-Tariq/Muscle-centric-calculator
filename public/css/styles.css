@@ -1,0 +1,814 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  align-items: center;
+  background: rgb(132, 4, 217);
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  justify-items: center;
+}
+
+.first-second {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  grid-template-areas: "left right";
+  padding: 10px;
+}
+
+.left-container {
+  background-image: url("https://debugsol.net/External-Images/side-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+
+.left-container h1 {
+  color: #fff;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.left-container h4 {
+  color: #fff;
+}
+
+.left-container p {
+  color: #fff;
+  font-size: 10px;
+}
+
+.left-container h3 {
+  color: #fff;
+  font-size: 25px;
+}
+
+.left-container h1 i {
+  background: #f7b1ab;
+  border-radius: 50%;
+  color: #807182;
+  font-size: 24px;
+  margin-right: 5px;
+  padding: 10px;
+  transform: rotate(-45deg);
+}
+
+.right-container {
+  background: #f6f3f3;
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 500px;
+}
+
+.right-container h1:nth-of-type(1) {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.range-slider {
+  width: 26rem !important;
+}
+
+.right-container .set {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.right-container input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 5px;
+}
+
+.right-container input,
+.right-container label {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.right-container header {
+  padding: 40px;
+}
+
+.right-container input,
+.right-container .pets-photo {
+  width: 100px;
+}
+
+.ft-input {
+  margin-right: 5px;
+}
+
+.right-container .pets-photo {
+  align-items: center;
+  display: grid;
+  grid-template-areas: ". .";
+}
+
+.right-container .pets-photo button {
+  border: none;
+  border-radius: 50%;
+  height: 38px;
+  margin-right: 10px;
+  outline: none;
+  width: 38px;
+}
+
+.right-container .pets-photo button i {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+}
+
+.right-container .pets-weight .radio-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.right-container footer {
+  align-items: center;
+  background: #fff;
+  display: grid;
+  padding: 5px 40px;
+}
+
+.right-container footer button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  line-height: 38px;
+  width: 100px;
+  border-radius: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.right-container footer #back {
+  background: #fff;
+  transition: 0.2s all ease-in-out;
+}
+
+.right-container footer #back:hover {
+  background: #171a2b;
+  color: white;
+}
+
+.right-container footer #next {
+  background: #807182;
+  border: 1px solid transparent;
+  color: #fff;
+}
+
+.right-container footer #next:hover {
+  background: #171a2b;
+}
+
+.pets-name label,
+.pets-breed label,
+.pets-birthday label,
+.pets-gender label,
+.pets-spayed-neutered label,
+.pets-weight label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.radio-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  width: 100px;
+}
+
+.height-input {
+  display: flex;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container input[type="radio"]:checked + label {
+  background: #f7b1ab;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.left-footer {
+  position: absolute;
+  width: 100%;
+  left: -40px;
+  bottom: 8px;
+}
+
+.text-input {
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #dbeffe;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.text-input:hover {
+  background-color: #cbe7fd;
+}
+
+#submit {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: block;
+  outline: none;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  display: inline-block;
+  margin: 5px 20px 5px 8px;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #cbe7fd;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #289df6;
+}
+
+.range-slider-container {
+  width: 100%;
+}
+
+.range-bar {
+  display: flex;
+}
+
+.range-slider {
+  width: 100%;
+  height: 20px !important;
+  background: #adadad;
+  outline: none;
+  border-radius: 40px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.progress {
+  position: relative;
+  left: 45%;
+}
+
+/* muscel centric code */
+
+.muscle-centric-container {
+  display: flex;
+  justify-content: center;
+  grid-template-areas: "left right right";
+  padding: 100px;
+}
+
+.left-container-resut {
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  width: 557px;
+}
+
+.left-container-resut h1 {
+  color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  font-size: 24px;
+}
+
+.left-container-resut h1 i {
+  background: #f7b1ab;
+  border-radius: 50%;
+  color: #807182;
+  font-size: 24px;
+  margin-right: 5px;
+  padding: 10px;
+  transform: rotate(-45deg);
+}
+
+.left-container-resut .puppy {
+  bottom: -5px;
+  position: absolute;
+  text-align: center;
+}
+
+.left-container-resut .puppy:before {
+  background: #807182;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.right-container-result {
+  background: #e5e5e5;
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 700px;
+}
+
+.right-container-result h1:nth-of-type(1) {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.right-container-result .set {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.right-container-result input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 5px;
+}
+
+.right-container-result input,
+.right-container-result label {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.right-container-result header {
+  padding: 40px;
+}
+
+.right-container-result label,
+.right-container-result input,
+.right-container-result .pets-photo {
+  width: 176px;
+}
+
+.right-container-result .pets-photo {
+  align-items: center;
+  display: grid;
+  grid-template-areas: ". .";
+}
+
+.right-container-result .pets-photo button {
+  border: none;
+  border-radius: 50%;
+  height: 38px;
+  margin-right: 10px;
+  outline: none;
+  width: 38px;
+}
+
+.right-container-result .pets-photo button i {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+}
+
+.right-container-result .pets-weight .radio-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.right-container-result footer {
+  align-items: center;
+  background: #fff;
+  display: grid;
+  padding: 5px 40px;
+}
+
+.right-container-result footer button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  line-height: 38px;
+  width: 100px;
+  border-radius: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.right-container-result footer #back {
+  background: #fff;
+  transition: 0.2s all ease-in-out;
+}
+
+.right-container-result footer #back:hover {
+  background: #171a2b;
+  color: white;
+}
+
+.right-container-result footer #next {
+  background: #807182;
+  border: 1px solid transparent;
+  color: #fff;
+}
+
+.right-container-result footer #next:hover {
+  background: #171a2b;
+}
+
+.pets-name label,
+.pets-breed label,
+.pets-birthday label,
+.pets-gender label,
+.pets-spayed-neutered label,
+.pets-weight label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.radio-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container input[type="radio"]:checked + label {
+  background: #f7b1ab;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  position: relative;
+  padding: 10px;
+}
+
+.card__fat img {
+  width: 24%;
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+
+.card-1 {
+  background-color: #e0dede;
+  color: #171a2b;
+}
+
+.card-2 {
+  background-color: #cbc6c6;
+  color: #171a2b;
+}
+
+.black-comomon-card {
+  color: white;
+  width: 100%;
+  padding-top: 65px;
+}
+
+.card-3,
+.card-5 {
+  background-color: #0d0f1f;
+}
+
+.card-4,
+.card-6 {
+  background-color: #171a2b;
+}
+
+.humman img {
+  width: 100%;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.black-cards {
+  display: flex;
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__dinner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__dinner img {
+  width: 25%;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+}
+
+.height-weigth {
+  background-color: #0c6ced;
+  padding: 22px 40px 10px 45px;
+}
+
+.total-grams {
+  background-color: #dadada;
+  padding: 1px 15px 6px 16px;
+}
+
+.total-grams h4 img {
+  width: 20%;
+}
+
+.total-grams h4 {
+  display: flex;
+  align-items: center;
+}
+
+.image-9 {
+  width: 30%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.height-weigth h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.results-div {
+  display: none;
+}
+
+.card__fat h2 {
+  color: #fff;
+}
+
+.card-7 {
+  color: white;
+  padding: 10px;
+}
+
+.h-20 {
+  font-size: 20px;
+}
+
+.total-calories {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.total-calories img {
+  width: 7%;
+}
+
+.total-calories-graph {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.total-calories-graph-bottom {
+  background-color: #cbc6c6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding-left: 20px; */
+}
+
+.total-calories-graph-bottom img {
+  width: 80%;
+}
+.total-calories h3 {
+  color: white;
+}
+.text-white {
+  color: white;
+}
+.font-30 {
+  font-size: 30px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.text-red {
+  color: #ed4731;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.font-bold {
+  font-weight: bold;
+}
+.text-right {
+  text-align: right;
+}
+.restart-buttons {
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+}
+.restart-buttons button {
+  margin: 10px;
+}
+#proteinC,
+#fatC,
+#carbC {
+  color: #0c6ced;
+}
+#barchart {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+#myChart {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+@-ms-viewport{
+  width: device-width;
+}
+@media screen and (max-width: 768px) {
+  .right-container-result {
+    display: initial !important;
+    width: 100% !important;
+  }
+
+  .muscle-centric-container {
+    display: block !important;
+    padding: 0px !important;
+  }
+  .left-container-resut {
+    width: 100% !important;
+  }
+  .restart-buttons {
+    width: 100%;
+  }
+  .signup-container {
+    display: block;
+  }
+  .left-container {
+    height: 80vh;
+    width: 100%;
+  }
+  .right-container {
+    width: 100%;
+    height: 100%;
+  }
+  .main-page-title {
+    text-align: center;
+  }
+  .right-container h1:nth-of-type(1) {
+    text-align: center;
+  }
+  .total-calories-graph {
+    display: block;
+  }
+  .w-50 {
+    width: 100%;
+  }
+}

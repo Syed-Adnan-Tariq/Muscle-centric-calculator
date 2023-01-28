@@ -1,0 +1,231 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./public/css/styles.css">
+
+<div class="signup-container">
+    <div class="left-container">
+      <div class=""></div>
+      <div class="first-second"></div>
+    </div>
+
+    <div class="right-container">
+      <header>
+        <h1>MUSCLE-CENTRIC CALCULATOR</h1>
+        <div class="set">
+          <div class="pets-gender">
+            <label for="pet-gender-female">I AM</label>
+            <div class="radio-container">
+              <input
+                checked=""
+                id="pet-gender-male"
+                name="pet-gender"
+                type="radio"
+                value="Male"
+              />
+              <label for="pet-gender-male">Male</label>
+              <input
+                id="pet-gender-female"
+                name="pet-gender"
+                type="radio"
+                value="Female"
+              />
+              <label for="pet-gender-female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="set">
+          <div class="pets-name">
+            <label for="pets-name">Ideal Body Weight</label>
+            <input id="pets-weight" placeholder="lbs" type="text" />
+          </div>
+        </div>
+        <div class="set">
+          <div class="pets-name">
+            <label for="pets-name">Height</label>
+            <span class="height-input">
+              <input
+                id="pets-heightft"
+                class="ft-heightft"
+                placeholder="ft"
+                type="text"
+              />
+              <input id="pets-heightin" placeholder="in" type="text" />
+            </span>
+          </div>
+        </div>
+
+        <div class="set">
+          <div class="pets-name">
+            <label for="pets-name">Age</label>
+            <input id="pets-age" placeholder="" type="text" />
+          </div>
+        </div>
+        <div class="set">
+          <p class="font-bold">
+            Stress Factor / Activity Level: Recovery Mode
+          </p>
+        </div>
+        <div class="set">
+          <button
+            onclick="muscleCalculator(document.querySelector(`input[name='pet-gender']:checked`).value, document.getElementById('pets-age').value,  document.getElementById('pets-heightft').value, document.getElementById('pets-heightin').value, document.getElementById('pets-weight').value)"
+            type="button"
+            id="submit"
+          >
+            CLICK HERE FOR YOUR RESULTS
+          </button>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <div class="results-div">
+    <div class="muscle-centric-container">
+      <div class="left-container-resut">
+        <div class="height-weigth">
+          <div>
+            <h4 class="text-white font-20">
+              Your Muscle-Centric Recovery Diet Recommendations:
+            </h4>
+            <h4>
+              <span class="h-20 font-30 font-bold">Sex:</span>
+              <span id="sexVal" class="text-white font-30 font-bold"
+                >Female</span
+              >
+            </h4>
+            <h4>
+              <span class="h-20 font-30 font-bold">Age:</span>
+              <span id="ageVal" class="text-white font-30 font-bold">20</span>
+            </h4>
+            <h4>
+              <span class="h-20 font-30 font-bold">Height:</span>
+              <span id="heightVal" class="text-white font-30 font-bold"
+                >6ft 55inch</span
+              >
+            </h4>
+            <h4>
+              <span class="h-20 font-30 font-bold">Weight: </span
+              ><span id="weightVal" class="text-white font-30 font-bold"
+                >66lbs</span
+              >
+            </h4>
+          </div>
+        </div>
+        <div class="total-grams">
+          <div>
+            <div class="text-center">
+              <img
+                src="https://debugsol.net/External-Images/9.png"
+                class="image-9"
+                alt=""
+              />
+            </div>
+            <h4 class="text-center justify-content-center">
+              Total Daily Grams Of:
+            </h4>
+            <h4>
+              <img src="https://debugsol.net/External-Images/2.png" alt="" />
+              <span>Protein: <span id="proteinCal">15/40G</span></span>
+            </h4>
+            <h4>
+              <img src="https://www.linkpicture.com/q/fat-icon.png" alt="" />
+              <span>Fat: <span id="fatCal">15/40G</span></span>
+            </h4>
+            <h4>
+              <img src="https://debugsol.net/External-Images/5.png" alt="" />
+              <span>Carbs: <span id="carbCal">15/40G</span></span>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-container-result">
+        <div class="total-calories">
+          <h3 class="font-lg">
+            Total Daily Calories:
+            <span id="totalCal" class="text-red">123</span>
+          </h3>
+          <img src="https://debugsol.net/External-Images/3.png" alt="" />
+        </div>
+        <div class="total-calories-graph">
+          <div class="w-50">
+            <div id="myChart"></div>
+          </div>
+          <div class="w-50">
+            <div class="card card-1">
+              <div class="card__dinner">
+                <div class="text-center">
+                  <div
+                    class="d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="https://debugsol.net/External-Images/4.png"
+                      alt=""
+                    />
+                    <span id="proteinC" class="font-30 font-bold">123</span>
+                  </div>
+                  <h4> Calories for Protein</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card card-2">
+              <div class="card__dinner">
+                <div class="text-center">
+                  <div
+                    class="d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="https://debugsol.net/External-Images/7.png"
+                      alt=""
+                    />
+                    <span id="fatC" class="font-30 font-bold">123</span>
+                  </div>
+                  <h4> Calories for Fat</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card card-1">
+              <div class="card__dinner">
+                <div class="text-center">
+                  <div
+                    class="d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="https://debugsol.net/External-Images/6.png"
+                      alt=""
+                    />
+                    <span id="carbC" class="font-30 font-bold">123</span>
+                  </div>
+                  <h4> Calories for Carbs</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="total-calories-graph-bottom">
+          <!-- <div>
+            <p class="text-white font-bold">Daily Meal Macro Distribution</p>
+          </div> -->
+          <!-- <div style="margin-left: 10px"> -->
+            <div
+              id="barchart"
+            ></div>
+          <!-- </div> -->
+          <!-- <div class="text-right">
+            <img src="https://debugsol.net/External-Images/19.png" alt="" />
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="restart-buttons">
+      <button onclick="toggleDisplay()" type="button" id="submit">
+        Click Here To Start Over
+      </button>
+   
+    </div>
+  </div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script type=text/javascript>
+google.charts.load("current", {packages:["corechart"]});
+</script> 
+<script src="./public/js/script.js" ></script>
