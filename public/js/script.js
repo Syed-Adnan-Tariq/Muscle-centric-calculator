@@ -251,8 +251,6 @@ function step8(protein, fat, carb) {
       alwaysOutside: true,
       textStyle: {
         fontSize: 11,
-        color: "#000",
-        auraColor: "none",
       },
     },
     hAxis: {
