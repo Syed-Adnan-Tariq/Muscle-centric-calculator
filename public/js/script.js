@@ -86,7 +86,7 @@ function muscleCalculator(sex, age, heightInFt, heightInInch, weight) {
   //       CARB: ${conCarb}`;
 
   document.getElementById("sexVal").innerHTML = `${sex}`;
-  document.getElementById("ageVal").innerHTML = `${age}`;
+  document.getElementById("ageVal").innerHTML = `${age} yrs`;
   document.getElementById(
     "heightVal"
   ).innerHTML = `${heightInFt}' ${heightInInch}"`;
@@ -245,68 +245,32 @@ function step8(protein, fat, carb) {
     ],
   ]);
 
-  let options = {
-    title: "Daily Meal Macro Distribution",
-    annotations: {
-      alwaysOutside: true,
-      textStyle: {
-        fontSize: 11,
-      },
-    },
-    hAxis: {
-      title: "",
-    },
-    vAxis: {
-      format: "#.##gm",
-    },
-    backgroundColor: "#cbc6c6",
-    chartArea: {
-      backgroundColor: "#cbc6c6",
-    },
-    colors: ["rgb(0, 0, 255)", "rgb(255, 0, 0)", "rgb(0, 0, 0)"],
-    legend: { position: "top", textStyle: { color: "black", fontSize: 12 } },
-  };
-  let chart = new google.visualization.ColumnChart(
-    document.getElementById("barchart")
-  );
-  chart.draw(data, options);
-  
-  // const ctx2 = document.getElementById("barchart").getContext("2d");
-  // var barChart = new Chart(ctx2, {
-  //   type: "bar",
-  //   data: {
-  //     labels: ["Breakfast", "AM Snack", "Pre-PT Lunch","PT/Excercise", "Post-PT Dinner", "PM Snack"],
-  //     datasets: [
-  //       {
-  //         label: "Protein (gm)",
-  //         data: [mp1, mp2, mp3,'', mp4, mp5],
-  //         backgroundColor: "rgba(0,0,255,1)",
-  //       },
-  //       {
-  //         label: "Fat (gm)",
-  //         data: [mf1, mf2, mf3,'' ,mf4, mf5],
-  //         backgroundColor: "rgba(255,0,0,1)",
-  //       },
-  //       {
-  //         label: "Carb (gm)",
-  //         data: [mc1, mc2, mc3, '', mc4, mc5],
-  //         backgroundColor: "rgba(0,0,0,1)",
-  //       },
-  //     ],
-  //   },
-  //   options: {
-  //     scales: {
-  //       y: {
-  //         ticks: {
-  //           // Include a dollar sign in the ticks
-  //           callback: function (value, index, ticks) {
-  //             return value + " gm";
-  //           },
-  //         },
-  //       },
+  // let options = {
+  //   title: "Daily Meal Macro Distribution",
+  //   annotations: {
+  //     alwaysOutside: true,
+  //     textStyle: {
+  //       fontSize: 11,
   //     },
   //   },
-  // });
+  //   hAxis: {
+  //     title: "",
+  //   },
+  //   vAxis: {
+  //     format: "#.##gm",
+  //   },
+  //   backgroundColor: "#cbc6c6",
+  //   chartArea: {
+  //     backgroundColor: "#cbc6c6",
+  //   },
+  //   colors: ["rgb(0, 0, 255)", "rgb(255, 0, 0)", "rgb(0, 0, 0)"],
+  //   legend: { position: "top", textStyle: { color: "black", fontSize: 12 } },
+  // };
+  // let chart = new google.visualization.ColumnChart(
+  //   document.getElementById("barchart")
+  // );
+  // chart.draw(data, options);
+  
 }
 
 function calStep8(m1, m2, m3, m4, m5, fact, cal) {
@@ -346,10 +310,15 @@ function drawChart(pper, fper, cper) {
   ]);
 
   let options = {
-    title: "% Percentage of daily calories",
+    title: "Macros %",
+    titleTextStyle: {
+      fontName: '',
+      fontSize: 21,
+      bold: true,
+  },
     backgroundColor: "#e5e5e5",
     colors: ["rgb(0, 0, 255)", "rgb(255, 0, 0)", "rgb(0, 0, 0)"],
-    legend: { position: "top", textStyle: { color: "black", fontSize: 12 } },
+    legend: { position: "none" },
     pieHole: 0.3
   };
 

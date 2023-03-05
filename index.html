@@ -61,7 +61,7 @@
         </div>
         <div class="set">
           <p class="font-bold">
-            Stress Factor / Activity Level: Recovery Mode
+            Stress Factor / Activity Level: <mark>Recovery Mode</mark>
           </p>
         </div>
         <div class="set">
@@ -111,27 +111,42 @@
         </div>
         <div class="total-grams">
           <div>
-            <div class="text-center">
+            <!-- <div class="text-center">
               <img
                 src="https://debugsol.net/External-Images/9.png"
                 class="image-9"
                 alt=""
               />
-            </div>
-            <h4 class="text-center justify-content-center">
-              Total Daily Grams Of:
-            </h4>
+            </div> -->
+            <h2 style="margin-top: 1rem;" class="text-center justify-content-center">
+              Total daily <u>grams</u> of:
+            </h2>
             <h4>
               <img src="https://debugsol.net/External-Images/2.png" alt="" />
-              <span>Protein: <span id="proteinCal">15/40G</span></span>
+              <span style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-around;
+              width: 100%;
+          ">Protein: <span id="proteinCal">15/40G</span></span>
             </h4>
             <h4>
               <img src="https://www.linkpicture.com/q/fat-icon.png" alt="" />
-              <span>Fat: <span id="fatCal">15/40G</span></span>
+              <span style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-around;
+              width: 100%;
+          ">Fat: <span id="fatCal">15/40G</span></span>
             </h4>
             <h4>
               <img src="https://debugsol.net/External-Images/5.png" alt="" />
-              <span>Carbs: <span id="carbCal">15/40G</span></span>
+              <span style="
+              display: flex;
+              align-items: baseline;
+              justify-content: space-around;
+              width: 100%;
+          ">Carbs: <span id="carbCal">15/40G</span></span>
             </h4>
           </div>
         </div>
@@ -145,12 +160,10 @@
           </h3>
           <img src="https://debugsol.net/External-Images/3.png" alt="" />
         </div>
-        <div class="total-calories-graph">
-          <div class="w-50">
-            <div id="myChart"></div>
-          </div>
-          <div class="w-50">
-            <div class="card card-1">
+        <div class="total-calories-graph card-2">
+          <h2 style="text-align: center; margin-top: 1rem;">Daily <u>calories</u> from:</h2>
+          <div class="calories-flex">
+            <div class="card">
               <div class="card__dinner">
                 <div class="text-center">
                   <div
@@ -162,11 +175,11 @@
                     />
                     <span id="proteinC" class="font-30 font-bold">123</span>
                   </div>
-                  <h4> Calories for Protein</h4>
+                  <h4>Protein</h4>
                 </div>
               </div>
             </div>
-            <div class="card card-2">
+            <div class="card">
               <div class="card__dinner">
                 <div class="text-center">
                   <div
@@ -178,11 +191,11 @@
                     />
                     <span id="fatC" class="font-30 font-bold">123</span>
                   </div>
-                  <h4> Calories for Fat</h4>
+                  <h4>Fat</h4>
                 </div>
               </div>
             </div>
-            <div class="card card-1">
+            <div class="card">
               <div class="card__dinner">
                 <div class="text-center">
                   <div
@@ -194,25 +207,18 @@
                     />
                     <span id="carbC" class="font-30 font-bold">123</span>
                   </div>
-                  <h4> Calories for Carbs</h4>
+                  <h4>Carbs</h4>
                 </div>
               </div>
             </div>
           </div>
+          <div>
+            <!-- <h1>Macros %</h1> -->
+            <div id="myChart"></div>
+          </div>
         </div>
-        <div class="total-calories-graph-bottom">
-          <!-- <div>
-            <p class="text-white font-bold">Daily Meal Macro Distribution</p>
-          </div> -->
-          <!-- <div style="margin-left: 10px"> -->
-            <div
-              id="barchart"
-            ></div>
-          <!-- </div> -->
-          <!-- <div class="text-right">
-            <img src="https://debugsol.net/External-Images/19.png" alt="" />
-          </div> -->
-        </div>
+        <!-- <div class="total-calories-graph-bottom">
+        </div> -->
       </div>
     </div>
     <div class="restart-buttons">

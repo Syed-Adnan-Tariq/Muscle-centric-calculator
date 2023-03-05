@@ -508,7 +508,7 @@ body {
 }
 
 .card {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); */
   transition: all 0.2s;
   position: relative;
   padding: 10px;
@@ -657,7 +657,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .results-div {
@@ -688,10 +688,11 @@ body {
 .total-calories img {
   width: 7%;
 }
-
+ 
 .total-calories-graph {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  overflow: hidden;
 }
 
 .w-50 {
@@ -700,9 +701,9 @@ body {
 
 .total-calories-graph-bottom {
   background-color: #cbc6c6;
-  display: flex;
+  /* display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
   /* padding-left: 20px; */
 }
 
@@ -749,10 +750,17 @@ body {
 .restart-buttons button {
   margin: 10px;
 }
-#proteinC,
-#fatC,
-#carbC {
+#proteinC, #proteinCal {
   color: #0c6ced;
+}
+#fatC, #fatCal {
+  color: #ff0000;
+}
+#carbC, #carbCal {
+  color: #000;
+}
+#proteinCal, #fatCal, #carbCal {
+  font-size: 30px;
 }
 #barchart {
   width: 100%;
@@ -766,8 +774,11 @@ body {
   background-color: #e5e5e5;
 }
 #totalCal {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-left: 1rem;
+}
+.calories-flex {
+  display: flex;
 }
 @-ms-viewport{
   width: device-width;
