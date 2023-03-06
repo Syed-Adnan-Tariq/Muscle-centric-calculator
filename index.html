@@ -111,13 +111,6 @@
         </div>
         <div class="total-grams">
           <div>
-            <!-- <div class="text-center">
-              <img
-                src="https://debugsol.net/External-Images/9.png"
-                class="image-9"
-                alt=""
-              />
-            </div> -->
             <h2 style="margin-top: 1rem;" class="text-center justify-content-center">
               Total daily <u>grams</u> of:
             </h2>
@@ -213,23 +206,67 @@
             </div>
           </div>
           <div>
-            <!-- <h1>Macros %</h1> -->
             <div id="myChart"></div>
           </div>
         </div>
-        <!-- <div class="total-calories-graph-bottom">
-        </div> -->
       </div>
     </div>
     <div class="restart-buttons">
+      <button id="open-subscribe-form" type="button">
+        Email My Results
+      </button>
       <button onclick="toggleDisplay()" type="button" id="submit">
         Click Here To Start Over
       </button>
-   
     </div>
   </div>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <div class="subscribe-form">
+    <div class="right">
+      <h2>Email my results!</h2>
+      <p>This will send your results to your given email.</p>
+      <div id="mc_embed_signup">
+        <form action="https://xrscience.us21.list-manage.com/subscribe/post?u=ea6d11e42d092a585f5ff77a9&amp;id=7654c0766e&amp;f_id=009794e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">           
+          <div id="mc_embed_signup_scroll">
+             <div class="form">
+        <div class="input">
+          <label for="mce-FNAME">Name</label>
+          <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+        </div>
+        <div class="input">
+          <label for="mce-EMAIL">Email Address</label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+        </div>
+        <div hidden="true">
+          <input type="hidden" value="" name="HEIGHT" class="" id="mce-HEIGHT">
+    <input type="hidden" value="" name="DCFAT" class="" id="mce-DCFAT">
+    <input type="hidden" value="" name="DCCARBS" class="" id="mce-DCCARBS">
+    <input type="hidden" value="" name="DCPROTEIN" class="" id="mce-DCPROTEIN">
+    <input type="hidden" value="" name="CALORIES" class="" id="mce-CALORIES">
+    <input type="hidden" value="" name="CARBS" class="" id="mce-CARBS">
+    <input type="hidden" value="" name="FAT" class="" id="mce-FAT">
+    <input type="hidden" value="" name="PROTEIN" class="" id="mce-PROTEIN">
+    <input type="hidden" value="" name="WEIGHT" class="" id="mce-WEIGHT">
+    <input type="hidden" value="" name="GENDER" id="mce-GENDER">
+    <input type="hidden" value="" name="AGE" id="mce-AGE">
+    <input type="hidden" name="tags" value="316478"></div>
+	  <div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ea6d11e42d092a585f5ff77a9_7654c0766e" tabindex="-1" value=""></div>
+    <div class="button clear">
+      <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
+    </div>
+  </div>
+</form>
+  </div>
+    </div>
+    <button class="close-btn">
+      &times;
+    </button>
+  </div>
+
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <script type=text/javascript>
 google.charts.load("current", {packages:["corechart"]});

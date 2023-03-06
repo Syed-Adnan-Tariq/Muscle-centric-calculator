@@ -247,7 +247,7 @@ body {
   background-color: #cbe7fd;
 }
 
-#submit {
+#submit, #open-subscribe-form {
   border: none;
   border-radius: 10px;
   height: 40px;
@@ -259,7 +259,7 @@ body {
   cursor: pointer;
 }
 
-#submit:hover {
+#submit:hover, #open-subscribe-form:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -821,5 +821,95 @@ body {
   }
   .w-50 {
     width: 100%;
+  }
+}
+
+.subscribe-form {
+  position:fixed; 
+  top:-100%; 
+  left:50%; 
+  transform:translate(-50%,-50%) scale(1.15); 
+  width:calc(100% - 20px);
+  max-width:650px;
+  background:#fff;
+  border-radius:10px;
+  display:grid;
+  gap:10px;
+  padding:50px 40px 40px;
+  box-shadow:0px 2px 2px 2px rgba(0,0,0,0.05);
+  z-index:2;
+  opacity:0; 
+  transition:top 0ms ease-in-out 300ms,
+             transform 300ms ease-in-out 0ms,
+             opacity 300ms ease-in-out 0ms;
+}
+.subscribe-form.active {
+  top:50%;
+  transform:translate(-50%,-50%) scale(1);
+  opacity:1;
+  transition:top 0ms ease-in-out 0ms,
+             transform 300ms ease-in-out 0ms,
+             opacity 300ms ease-in-out 0ms;
+}
+.subscribe-form .close-btn {
+  position:absolute;
+  top:10px;
+  right:10px;
+  font-size:25px;
+  color:rgb(255, 255, 255);
+  background-color: rgb(5, 133, 97);
+  border:none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor:pointer;
+}
+.subscribe-form .left {
+  display:flex;
+  align-items:center;
+}
+.subscribe-form .right h2 {
+  font-size:28px;
+  font-family:"Montserrat",sans-serif;
+  line-height:1.15;
+  margin-bottom:10px;
+  color:#111;
+}
+.subscribe-form .right p {
+  font-size:16px;
+  color:#555;
+  margin-bottom:15px;
+}
+.subscribe-form .right .form label {
+  display:block;
+  margin-bottom:5px;
+  font-size:15px;
+}
+.subscribe-form .right .form .input {
+  margin-bottom:10px;
+}
+.subscribe-form .right .form input {
+  width:100%;
+  padding:12px;
+  border:2px solid rgb(25, 117, 142);
+  font-size:17px;
+  border-radius:5px;
+}
+.subscribe-form .right .form button {
+  width:100%;
+  padding:10px;
+  font-size:18px;
+  border-radius:5px;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  background:#0e5f77;
+  color:#fff;
+  box-shadow:0px 2px 2px #ddd;
+}
+
+@media(min-width: 680px){
+  .subscribe-form {
+    grid-template-columns:repeat(2, 1fr);
   }
 }

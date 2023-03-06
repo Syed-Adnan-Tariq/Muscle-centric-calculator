@@ -98,6 +98,20 @@ function muscleCalculator(sex, age, heightInFt, heightInInch, weight) {
   document.getElementById("fatC").innerHTML = `${conFat.toFixed(0)}`;
   document.getElementById("carbC").innerHTML = `${conCarb.toFixed(0)}`;
   document.getElementById("proteinC").innerHTML = `${conProtein.toFixed(0)}`;
+
+  //for mail
+  document.getElementById('mce-HEIGHT').value = `${heightInFt} ${heightInInch}`;
+  document.getElementById('mce-DCFAT').value = `${conFat.toFixed(0)}`;
+  document.getElementById('mce-DCCARBS').value = `${conCarb.toFixed(0)}`;
+  document.getElementById('mce-DCPROTEIN').value = `${conProtein.toFixed(0)}`;
+  document.getElementById('mce-CALORIES').value = `${totalCalories.toFixed(0)}`;
+  document.getElementById('mce-CARBS').value = `${carb.toFixed(0)}`;
+  document.getElementById('mce-FAT').value = `${fat.toFixed(0)}`;
+  document.getElementById('mce-PROTEIN').value = `${protein.toFixed(0)}`;
+  document.getElementById('mce-WEIGHT').value = `${weight}`;
+  document.getElementById('mce-GENDER').value = `${sex}`;
+  document.getElementById('mce-AGE').value = `${age}`;
+  //end for mail
 }
 
 function convertAge(age, weightInKilograms) {
@@ -327,3 +341,14 @@ function drawChart(pper, fper, cper) {
     );
     chart.draw(data, options);
 }
+
+
+//for popup
+document.querySelector("#open-subscribe-form").addEventListener("click",function(){
+  document.querySelector(".subscribe-form").classList.add("active");
+});
+
+document.querySelector(".subscribe-form .close-btn").addEventListener("click",function(){
+  document.querySelector(".subscribe-form").classList.remove("active");
+});
+//end for popup
